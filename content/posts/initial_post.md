@@ -8,4 +8,4 @@ Finally get things working!
 
 Now I need to test image uploading before writing more.
 
-Testing Repositories. Again. Again. Again.
+Now I want to change to see if it is finally working.
