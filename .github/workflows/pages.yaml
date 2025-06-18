@@ -26,10 +26,15 @@ jobs:
 
       - name: Deploy
         if: github.ref == 'refs/heads/main'
+        env:
+          TOKEN: ${{ secrets.TARGET_REPO_TOKEN }}
         run: |
           cd public
-          git add .
+          git init
           git config user.name 'mikezom'
           git config user.email 'mikezom3721@gmail.com'
-          git commit -m 'Updating site'
-          git push origin main
+          git remote add origin https://x-access-token:${TOKEN}@github.com/mikezom/mikezom.github.io.git
+          git checkout -b main
+          git add .
+          git commit -m 'Update site'
+          git push --force origin main
