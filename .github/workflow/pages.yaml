@@ -1,0 +1,35 @@
+name: Release
+
+# Triggered by pushing on main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        if: github.ref == 'refs/heads/main'
+        run: |
+          cd public
+          git add .
+          git config user.name 'mikezom'
+          git config user.email 'mikezom3721@gmail.com'
+          git commit -m 'Updating site'
+          git push
