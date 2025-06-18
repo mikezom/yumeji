@@ -1,7 +1,7 @@
 ---
 date: '2025-06-18T12:35:49+08:00'
-draft: true
-title: '2025 06 18 Scythe'
+draft: false
+title: 'Scythe'
 ---
 
 ❗ **This article was written in 2021** ❗
