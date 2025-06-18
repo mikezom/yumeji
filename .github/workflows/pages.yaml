@@ -31,7 +31,6 @@ jobs:
           cd public
           git config user.email 'mikezom3721@gmail.com'
           git config user.name 'mikezom'
-          git remote -v
           git add .
           git commit -m 'Update site'
-          git push origin main
+          git push --force origin main
