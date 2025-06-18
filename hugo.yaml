@@ -2,3 +2,14 @@ baseURL: https://mikezom.github.io/
 languageCode: en-us
 title: Wandering in Dreams
 theme: ["PaperMod"]
+
+params:
+  homeInfoParams:
+    Title: Welcome to my webpage!
+    Content: 做出决定，承担责任。
+
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/mikezom"
+  
+  ShowReadingTime: true
