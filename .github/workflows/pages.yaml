@@ -23,7 +23,7 @@ jobs:
           hugo-version: latest
 
       - name: Build
-        run: hugo
+        run: hugo --minify
 
       - name: Deploy
         if: github.ref == 'refs/heads/main'
@@ -33,4 +33,4 @@ jobs:
           git config user.name 'mikezom'
           git add .
           git commit -m 'Update site'
-          git push --force origin main
+          git push
