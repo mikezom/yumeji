@@ -34,4 +34,4 @@ jobs:
           git config user.email 'mikezom3721@gmail.com'
           git add .
           git commit -m 'Update site'
-          git push https://${TOKEN}:x-oauth-basic@github.com/mikezom/mikezom.github.io.git main
+          git push https://"$TOKEN":x-oauth-basic@github.com/mikezom/mikezom.github.io.git main
