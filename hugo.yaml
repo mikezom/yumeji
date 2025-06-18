@@ -13,3 +13,5 @@ params:
       url: "https://github.com/mikezom"
   
   ShowReadingTime: true
+  ShowToc: true
+  ShowCodeCopyButtons: true
