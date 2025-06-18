@@ -32,4 +32,4 @@ jobs:
           git config user.name 'mikezom'
           git config user.email 'mikezom3721@gmail.com'
           git commit -m 'Updating site'
-          git push
+          git push origin main
