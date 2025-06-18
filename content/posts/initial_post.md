@@ -8,6 +8,45 @@ Finally get things working!
 
 Now I need to test image uploading before writing more.
 
-Now I want to change to see if it is finally working.
+### Github permission settings
 
-No it is not working.
+Remember to checkout using private token
+
+```yaml
+name: Release
+
+# Triggered by pushing on main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+          token: ${{ secrets.PRIVATE_TOKEN }}
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        if: github.ref == 'refs/heads/main'
+        run: |
+          cd public
+          git config user.email '<your.email>'
+          git config user.name '<your.name>'
+          git add .
+          git commit -m 'Update site through github action.'
+          git push --force origin HEAD:main
+```
