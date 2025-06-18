@@ -38,8 +38,7 @@ jobs:
         run: |
           cd public
           gh api octocat
-          git config user.name 'mikezom'
-          git config user.email 'mikezom3721@gmail.com'
+          gh auth status
           git add .
           git commit -m 'Update site'
           git push origin main
