@@ -1,6 +1,6 @@
 [submodule "themes/PaperMod"]
 	path = themes/PaperMod
-	url = https://github.com/adityatelange/hugo-PaperMod.git
+	url = https://github.com/mikezom/hugo-PaperMod.git
 [submodule "release"]
 	path = release
 	url = git@github.com:mikezom/mikezom.github.io.git
