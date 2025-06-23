@@ -3,6 +3,21 @@ languageCode: en-us
 title: Wandering in Dreams
 theme: ["PaperMod"]
 
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $
+            - $
+          inline:
+          - - \(
+            - \)
+        enable: true
+
 params:
   homeInfoParams:
     Title: Welcome to my webpage!
@@ -15,3 +30,4 @@ params:
   ShowReadingTime: true
   ShowToc: true
   ShowCodeCopyButtons: true
+  math: true
