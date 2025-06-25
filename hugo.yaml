@@ -20,7 +20,7 @@ markup:
 
 params:
   homeInfoParams:
-    Title: Welcome to my webpage!
+    Title: Welcome to my homepage!
     Content: 做出决定，承担责任。
 
   socialIcons:
