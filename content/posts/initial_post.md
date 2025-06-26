@@ -6,9 +6,9 @@ title: 'Initial_post'
 
 Finally get things working!
 
-Now I need to test image uploading before writing more.
+[x] test image uploading before writing more. 
 
-### Github permission settings
+### Github Actions
 
 Remember to checkout using private token
 
@@ -47,6 +47,6 @@ jobs:
           git config user.email '<your.email>'
           git config user.name '<your.name>'
           git add .
-          git commit -m 'Update site through github action.'
+          git commit -m '<your.upload.commit>'
           git push --force origin HEAD:main
 ```
