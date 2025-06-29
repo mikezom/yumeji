@@ -1,7 +1,7 @@
 ---
 date: '2025-06-27T00:15:42+08:00'
 draft: false
-title: '2025 06 27 Balancing Practice'
+title: '2025 06 27 数值笔记'
 ---
 
 ## Markov Chain Problems
@@ -80,7 +80,7 @@ $$
 \mu_n + 0.5 \mu_{n-1}  = n
 $$
 
-接下来我们利用待定系数法构造等比数列$g_n$：
+接下来我们利用待定系数法构造等比数列\(g_n\)：
 
 $$
 \begin{aligned}
@@ -89,7 +89,6 @@ g_{n-1} &= \mu_{n-1} + A(n-1) + B \\
 &= -2(\mu_n - n) + A(n-1) + B\\
 &=-2\mu_n + (2 + A)n + (-A +B)\\
 &= -2(\mu_n + An + B) + (3A +2)n + (-A + 3B)
-
 \end{aligned}
 $$
 
@@ -102,16 +101,17 @@ g_n &= \mu_n - \frac{2}{3}n - \frac{2}{9}
 \end{aligned}
 $$
 
-由$\mu_0 = 0$与等比数列性质可得
+由\(\mu_0 = 0\)与等比数列性质可得
 $$
 \begin{aligned}
 \mu_n = \frac{2}{3}n + \frac{2}{9} - \frac{2}{9} (-\frac{1}{2})^n
 \end{aligned}
 $$
 
-代入$n = 100$得
+代入\(n = 100\)得
 $$
 \mu_{100} = 66\frac{8}{9} - \frac{2}{9}(-\frac{1}{2})^{100}
 $$
 
+---
 
