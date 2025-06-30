@@ -115,4 +115,23 @@ $$
 
 ---
 
-[TODO] 扩展：设玩家面对一个血量为\(H\)的敌人，非暴击时造成\(1\)点伤害，暴击时造成\(k, k \in \N\)点伤害，求期望打击数？
+扩展：设玩家面对一个血量为\(H\)的敌人，非暴击时造成\(1\)点伤害，暴击时造成\(k, k \in \mathbb{N}\)点伤害，暴击概率为\(p\)求期望打击数？
+
+可以使用蒙特卡洛解决实际问题。
+
+```python
+import numpy as np
+def expected_hits(enemy_hp: int, player_damage: list[int], player_damage_probability: list[int]) -> float:
+    TEST_SIZE = 1E7
+    hit_total = 0
+    for _ in range(TEST_SIZE):
+        damage_dealt = 0
+        hit = 0
+        while damage_dealt < enemy_hp:
+            hit += 1
+            damage_dealt += np.random.choice(player_damage, 1, player_damage_probability)
+        hit_total += hit
+    return hit_total / TEST_SIZE
+```
+
+## --
