@@ -4,6 +4,6 @@ draft: true
 title: '2025 06 24 Genshin Practice'
 ---
 
-# 《原神》数值分析
+# 《原神》战斗数值拆解、设计反推
 
 ## 

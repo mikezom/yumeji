@@ -40,6 +40,8 @@ $$
 
 ## 算法实现
 
+![Figure](images/birds.png)
+
 ```python
 import numpy as np
 import random

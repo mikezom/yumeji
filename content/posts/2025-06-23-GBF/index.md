@@ -1,12 +1,10 @@
 ---
 date: '2025-06-23T18:31:09+08:00'
 draft: false
-title: 'GBF战斗数值的设计推导以及反拆'
+title: '碧蓝幻想战斗数值的设计推导以及反拆'
 ---
 
 ❗ **This article was written in 2025.04** ❗
-
-# GBF战斗数值的设计推导以及反拆
 
 ## 前言
 
